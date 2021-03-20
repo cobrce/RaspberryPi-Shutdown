@@ -62,7 +62,7 @@ if len(sys.argv) == 2 and sys.argv[1] == "shutdown_button":
         exit()
 
     # Add our function to execute when the button pressed event happens
-    GPIO.add_event_detect(21, GPIO.FALLING, callback=Shutdown, bouncetime=2000)    
+    GPIO.add_event_detect(21, GPIO.FALLING, callback=Shutdown, bouncetime=100)    
     # Now wait!
     while 1:
         time.sleep(1)
